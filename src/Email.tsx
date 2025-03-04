@@ -239,6 +239,7 @@ export const Email = forwardRef<HTMLInputElement, EmailProps>(
 
       function handleInputKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
          switch (e.code) {
+            case 'Tab':
             case 'Escape':
                e.stopPropagation()
                return clearResults()
@@ -267,7 +268,6 @@ export const Email = forwardRef<HTMLInputElement, EmailProps>(
 
                break
 
-            case 'Tab':
             case 'Enter':
                e.preventDefault()
                e.stopPropagation()

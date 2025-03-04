@@ -272,6 +272,7 @@ const ye = pe(
     }
     function le(e) {
       switch (e.code) {
+        case "Tab":
         case "Escape":
           return e.stopPropagation(), s();
         case "ArrowUp":
@@ -280,7 +281,6 @@ const ye = pe(
         case "ArrowDown":
           e.preventDefault(), e.stopPropagation(), a.hoveredIndex >= 0 && C({ isDecrement: !1 }), a.hoveredIndex < 0 && b(0, 0);
           break;
-        case "Tab":
         case "Enter":
           e.preventDefault(), e.stopPropagation(), a.hoveredIndex >= 0 && E(e, a.hoveredIndex, {
             isKeyboard: !0,
